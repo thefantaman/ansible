@@ -1,4 +1,5 @@
-- name: Upgrade_all_packages
-  dnf:
-    name: '*'
-    state: latest
+- hosts: all
+  become: true
+  gather_facts: no
+  roles:
+    - yumupdateall
