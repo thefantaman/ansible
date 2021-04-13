@@ -1,3 +1,4 @@
+task:
 - name: Upgrade_all_packages
   yum:
     name: '*'
