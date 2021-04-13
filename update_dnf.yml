@@ -1,5 +1,4 @@
-task:
- - name: Upgrade_all_packages
-   yum:
-     name: '*'
-     state: latest
+- name: Upgrade_all_packages
+  dnf:
+    name: '*'
+    state: latest
