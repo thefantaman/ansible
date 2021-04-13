@@ -3,6 +3,6 @@
   become: yes
   tasks:
   - name: upgrade all package
-    yum:
+    dnf:
       name: '*'
       state: latest
