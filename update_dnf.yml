@@ -1,2 +1,2 @@
-- name: upgrade all packages
+- name: upgrade all pacchetti
   yum: name=* state=latest
