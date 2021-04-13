@@ -1,5 +1,2 @@
-- hosts: all
-  become: true
-  gather_facts: no
-  roles:
-    - yumupdateall
+- name: upgrade all packages
+  yum: name=* state=latest
