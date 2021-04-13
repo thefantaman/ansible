@@ -1,3 +1,10 @@
 ---
-- name: upgrade all pacchetti
-  ansible.builtin.command: df -h
+- hosts: all
+  become: yes
+  tasks:
+  - name: upgrade all package
+    yum:
+      name: '*'
+      state: latest
+      
+  - debug: var=out.stdout_lines
