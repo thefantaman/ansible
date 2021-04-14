@@ -14,4 +14,4 @@
       enabled: no
   - name: RIAVVIO
     reboot:
-      post_reboot_delay: 100
+      post_reboot_delay: 90
