@@ -1,0 +1,6 @@
+---
+- tasks:
+  - name: upgrade all package
+    dnf:
+      name: '*'
+      state: latest
