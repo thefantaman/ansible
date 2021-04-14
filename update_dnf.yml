@@ -4,7 +4,7 @@
   tasks:
   - name: DISABLED SELINUX
     selinux:
-    state: disabled
+      state: disabled
   - name: DISABLE FIREWALLD
     systemd:
       name: firewalld
