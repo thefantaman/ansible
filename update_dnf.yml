@@ -2,6 +2,9 @@
 - hosts: test
   become: yes
   tasks:
+  - name: disable selinux
+    selinux:
+     state: disabled
   - name: upgrade all package
     dnf:
       name: '*'
