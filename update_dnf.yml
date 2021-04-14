@@ -13,6 +13,10 @@
     systemd:
       name: firewalld
       enabled: no
+  - name: DISABLE NetworkManager
+    systemd:
+      name: NetworkManager
+      enabled: no
   - name: RIAVVIO
     reboot:
       post_reboot_delay: 90
