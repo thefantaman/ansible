@@ -10,7 +10,8 @@
       name: '*'
       state: latest
   - name: DISABLE FIREWALLD
-    systemd: 
+    systemd:
+      name: firewalld
       enabled: no
   - name: RIAVVIO
     reboot:
