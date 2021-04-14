@@ -9,13 +9,9 @@
     dnf:
       name: '*'
       state: latest
-  - name: DISABLE FIREWALLD
+  - name: DISABLE FIREWALLD e NetworkManager
     systemd:
-      name: firewalld
-      enabled: no
-  - name: DISABLE NetworkManager
-    systemd:
-      name: NetworkManager
+      name: firewalld, NetworkManager
       enabled: no
   - name: RIAVVIO
     reboot:
