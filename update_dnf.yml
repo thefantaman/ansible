@@ -2,13 +2,16 @@
 - hosts: test
   become: yes
   tasks:
-  - name: disable selinux
+  - name: DISABLED SELINUX
     selinux:
      state: disabled
-  - name: upgrade all package
+  - name: UPGRADE DI TUTTI I PACCHETTI
     dnf:
       name: '*'
       state: latest
-  - name: reboot host
+  - name: DISABLE FIREWALLD
+    systemd: 
+      enabled: no
+  - name: RIAVVIO
     reboot:
       post_reboot_delay: 100
