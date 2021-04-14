@@ -11,4 +11,4 @@
       state: latest
   - name: reboot host
     reboot:
-      reboot_timeout: 100
+      post_reboot_delay: 100
