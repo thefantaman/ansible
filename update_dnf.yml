@@ -4,15 +4,35 @@
   tasks:
   - name: DISABLED SELINUX
     selinux:
-     state: disabled
+    state: disabled
+  - name: DISABLE FIREWALLD
+    systemd:
+      name: firewalld
+      enabled: no
   - name: UPGRADE DI TUTTI I PACCHETTI
     dnf:
       name: '*'
       state: latest
-  - name: DISABLE FIREWALLD e NetworkManager
-    systemd:
-      name: firewalld, NetworkManager
-      enabled: no
+  - name: AGGIUNGE EPEL
+    dnf:
+      name: oracle-epel-release-el8
+  - name: AGGIUNGE PACCHETTI
+    dnf:
+      name:
+        - htop 
+        - cifs-utils 
+        - ntp 
+        - setuptool 
+        - tigervnc-server 
+        - tigervnc-server-module 
+        - postfix 
+        - mailx 
+        - net-tools 
+        - wget 
+        - pv 
+        - vnstat 
+        - ntfs-3g
+      state: latest
   - name: RIAVVIO
     reboot:
-      post_reboot_delay: 90
+      post_reboot_delay: 60
