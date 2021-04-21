@@ -31,6 +31,13 @@
         - vnstat 
         - ntfs-3g
       state: latest
+  - name: CHRONY PER ORARIO
+    dnf:
+      name: chrony
+      state: latest
+    systemd:
+      name: chrony
+      enabled: yes
   - name: RIAVVIO
     reboot:
       post_reboot_delay: 60
