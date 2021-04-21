@@ -37,7 +37,7 @@
       state: latest
   - name: TEST 
     systemd:
-      name: chrony
+      name: chronyd
       enabled: yes
   - name: RIAVVIO
     reboot:
