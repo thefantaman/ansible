@@ -35,6 +35,7 @@
     dnf:
       name: chrony
       state: latest
+  - name: TEST 
     systemd:
       name: chrony
       enabled: yes
