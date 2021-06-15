@@ -13,9 +13,6 @@
     yum:
       name: '*'
       state: latest
-  - name: AGGIUNGE EPEL
-    yum:
-      name: oracle-epel-release-el8
   - name: AGGIUNGE PACCHETTI
     yum:
       name:
@@ -31,14 +28,6 @@
         - vnstat 
         - ntfs-3g
       state: latest
-  - name: CHRONY PER ORARIO
-    yum:
-      name: chrony
-      state: latest
-  - name: TEST 
-    systemd:
-      name: chronyd
-      enabled: yes
-  - name: RIAVVIO
+   - name: RIAVVIO
     reboot:
       post_reboot_delay: 60
