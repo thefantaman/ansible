@@ -29,5 +29,5 @@
         - ntfs-3g
       state: latest
    - name: RIAVVIO
-    reboot:
+     reboot:
       post_reboot_delay: 60
