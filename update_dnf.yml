@@ -10,14 +10,14 @@
       name: firewalld
       enabled: no
   - name: UPGRADE DI TUTTI I PACCHETTI
-    dnf:
+    yum:
       name: '*'
       state: latest
   - name: AGGIUNGE EPEL
-    dnf:
+    yum:
       name: oracle-epel-release-el8
   - name: AGGIUNGE PACCHETTI
-    dnf:
+    yum:
       name:
         - htop 
         - cifs-utils 
@@ -32,7 +32,7 @@
         - ntfs-3g
       state: latest
   - name: CHRONY PER ORARIO
-    dnf:
+    yum:
       name: chrony
       state: latest
   - name: TEST 
