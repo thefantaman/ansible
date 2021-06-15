@@ -13,21 +13,6 @@
     yum:
       name: '*'
       state: latest
-  - name: AGGIUNGE PACCHETTI
-    yum:
-      name:
-        - htop 
-        - cifs-utils 
-        - tigervnc-server 
-        - tigervnc-server-module 
-        - postfix 
-        - mailx 
-        - net-tools 
-        - wget 
-        - pv 
-        - vnstat 
-        - ntfs-3g
-      state: latest
-   - name: RIAVVIO
-     reboot:
+  - name: RIAVVIO
+    reboot:
       post_reboot_delay: 60
