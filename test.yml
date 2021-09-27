@@ -4,4 +4,4 @@
   become: yes
   tasks:
   - name: MOSTRAMI I FILES
-    cmd: ls -liath /tmp
+    ansible.builtin.command: ls -liath /tmp
