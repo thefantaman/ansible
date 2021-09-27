@@ -1,8 +1,7 @@
 ---
 
-- name: test 
-  hosts: all
+- hosts: all
   become: yes
   tasks:
-  ansible.builtin.shell:
-  cmd: ls -liath /tmp
+  - name: MOSTRAMI I FILES
+    cmd: ls -liath /tmp
