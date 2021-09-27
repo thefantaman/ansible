@@ -1,8 +1,9 @@
 ---
+
 - name: test 
   hosts: all
   become: yes
   tasks:
   ansible.builtin.shell:
   cmd: ls -liath
-  chdir: /tmp/
+    chdir: /tmp/
