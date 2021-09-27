@@ -3,5 +3,5 @@
 - hosts: all
   become: yes
   tasks:
-  - name: MOSTRAMI I FILES
-    ansible.builtin.command: ls -liath /tmp
+  - name: CREO IMMAGINE SUL DISCO
+    ansible.builtin.command: /sbin/
