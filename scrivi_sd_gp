@@ -1,0 +1,7 @@
+---
+
+- hosts: all
+  become: yes
+  tasks:
+  - name: SCRIVO microSD
+    ansible.builtin.shell: /bin/sdgreen
