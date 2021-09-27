@@ -4,4 +4,4 @@
   become: yes
   tasks:
   - name: CREO IMMAGINE SUL DISCO
-    ansible.builtin.command: /sbin/
+    ansible.builtin.command: ls -liath
