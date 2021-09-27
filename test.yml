@@ -6,4 +6,4 @@
   tasks:
   ansible.builtin.shell:
   cmd: ls -liath
-    chdir: /tmp/
+  chdir: /tmp/
