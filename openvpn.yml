@@ -1,0 +1,15 @@
+---
+
+- host: all
+  become: yes
+  task:
+  - name: sostituisco file di configurazione
+    copy: 
+      src: server/server.conf
+      dest: /etc/openvpn/server/server.conf
+      owner: root
+      group: root
+      mode: 0644
+  - name: copio file ccd
+    copy:
+      src: 
