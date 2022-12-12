@@ -9,7 +9,22 @@
       dest: /etc/openvpn/server/server.conf
       owner: root
       group: root
-      mode: 0644
+      mode: '0644'
   - name: copio file ccd
     copy:
-      src: 
+      src: ccd/
+      dest: /etc/openvpn/server/ccd/
+      directory_mode: yes
+      owner: root
+      group: openvpn
+      mode: '1204'
+  - name: aggiungo tabelle di routing se non esistono
+    shell: |
+      ID=`ip a |grep eth0|tail -n 1|awk '{print $4}'|awk -F . '{print $2}'`
+      for i in 248 249 250 252 253 254
+      do
+        ROUTING=`ip route|grep $i`
+          if [ -z "$ROUTING"  ]; then
+            echo "ip route add 10.$ID.$i.0/24 via 10.$ID.251.2 dev tun0"
+          fi
+      done
